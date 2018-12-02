@@ -11,6 +11,7 @@ You will be able to:
 - Understand and explain what a Autoregressive model is
 - Understand and explain what a Moving Average model is
 - Understand and apply the mathematical formulations for Autoregressive and Moving Average models
+- Understand how AR and MA can be combined in ARMA models
 
 ## The Autoregressive Model
 
