@@ -1,5 +1,5 @@
 
-# ARMA models
+# ARMA Models
 
 ## Introduction
 
