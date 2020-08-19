@@ -8,6 +8,7 @@ You've seen two basic time series models now, the random walk and white noise mo
 ## Objectives
 
 You will be able to:
+
 - Explain what autoregressive means in an autoregressive model 
 - Explain what a moving average model means 
 - Describe how AR and MA can be combined to form an ARMA model 
@@ -21,6 +22,7 @@ In words, the mathematical idea is the following:
  <img src="https://render.githubusercontent.com/render/math?math=\text{Today = constant %2b slope} \times \text{yesterday %2b noise} "> 
 
 Or, mathematically:
+
  <img src="https://render.githubusercontent.com/render/math?math=\large Y_t = \mu %2b \phi * Y_{t-1}%2b\epsilon_t"> 
 
 Some notes based on this formula:
@@ -41,7 +43,6 @@ Let's look at the autocorrelation plots as well.
 
 The oscillatory process of the time series with  <img src="https://render.githubusercontent.com/render/math?math=\phi=0.9"> is reflected in the autocorrelation function, returning an oscillatory autocorrelation function as well.  <img src="https://render.githubusercontent.com/render/math?math=\phi=0.2"> leads to a very low, insignificant,  autocorrelation.  <img src="https://render.githubusercontent.com/render/math?math=\phi=0.8"> leads to a strong autocorrelation for the first few lags and then incurs a steep decline. Having a  <img src="https://render.githubusercontent.com/render/math?math=\phi=1.02"> (just slightly bigger than 1) leads to strong and long-lasting autocorrelation.
 
-
 Next, let's look at the partial autocorrelation plots.
 
 <img src="images/AR_PACF.png">
@@ -57,6 +58,7 @@ In words, the mathematical idea is the following:
  <img src="https://render.githubusercontent.com/render/math?math=\text{Today = Mean %2b Noise %2b Slope} \times \text{yesterday's noise} "> 
 
 Or, mathematically:
+
  <img src="https://render.githubusercontent.com/render/math?math=\large Y_t = \mu %2b\epsilon_t %2b \theta * \epsilon_{t-1}"> 
 
 Some notes based on this formula:
