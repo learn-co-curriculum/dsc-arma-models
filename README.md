@@ -1,4 +1,3 @@
-
 # ARMA Models
 
 ## Introduction
@@ -31,20 +30,20 @@ Some notes based on this formula:
 
 We simulated some time series below. Have a look at them, and make sure this follows your intuition looking at the formula.
 
-![](images/AR_model.png)
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-arma-models/master/images/AR_model.png" alt="autoregressive model" />
 
 Note that simply having a value for *phi* ( $\phi$ ) slightly bigger than 1, the time series clearly goes in one direction. Note the scale of the y-axis, where the y-axis scale for all the other processes is between -10 and 10, the last time series goes down to values of -100.
 
 Let's look at the autocorrelation plots as well.
 
-![](images/AR_ACF.png)
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-arma-models/master/images/AR_ACF.png" alt="autoregressive autocorrelation functions" />
 
 The oscillatory process of the time series with $\phi=0.9$ is reflected in the autocorrelation function, returning an oscillatory autocorrelation function as well. $\phi=0.2$ leads to a very low, insignificant,  autocorrelation. $\phi=0.8$ leads to a strong autocorrelation for the first few lags and then incurs a steep decline. Having a $\phi=1.02$ (just slightly bigger than 1) leads to strong and long-lasting autocorrelation.
 
 
 Next, let's look at the partial autocorrelation plots.
 
-![](images/AR_PACF.png)
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-arma-models/master/images/AR_PACF.png" alt="autogregressive partial autocorrelation functions" />
 
 For each of these PACFs, we notice a high value for 1 lag, then autocorrelations of 0, except for the second one. This is no big surprise, as the slope parameter is fairly small, so the relationship between a value and the next one is fairly limited.
 
@@ -67,13 +66,13 @@ Some notes based on this formula:
 
 For the Moving Average Model we also simulated some time series with varying parameters below.
 
-![](images/MA_model.png)
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-arma-models/master/images/MA_model.png" alt="moving average model" />
 
 When there is a positive $\theta$ there is a certain persistence in level, meaning that each observation is generally close to its neighbors. This is more pronounced for higher values of $\theta$. MA series with negative coefficients, however, show oscillatory patterns. Recall that when $\theta=0$, the process is a true white noise process! 
 
 Let's look at the ACF plots.
 
-![](images/MA_ACF.png)
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-arma-models/master/images/MA_ACF.png" alt="moving average autocorrelation functions" />
 
 Remember that MA processes have autocorrelations, but because of the structure of the MA formula (regressing it on the noise term of the previous observation) there is only a dependence for one period, and the autocorrelation is zero for lags 2 and higher.
 
@@ -81,7 +80,7 @@ If $\theta >0$ the lag one autocorrelation is positive, if $\theta <0$ the lag o
 
 Next, let's look at the partial autocorrelation plots.
 
-![](images/MA_PACF.png)
+<img src="https://raw.githubusercontent.com/learn-co-curriculum/dsc-arma-models/master/images/MA_PACF.png" alt="moving average partial autocorrelation functions" />
 
 For PACFs, a typical structure is that  there is a strong correlation with the 1-period lag (strength depending on $\theta$), and then the PACF gradually tails off. You can particularly observe this for $\theta=0.9$ and $\theta=-0.95$.
 
@@ -141,7 +140,7 @@ Seeing the table above, you might get an idea of why ACF and PACF are so useful 
 
 ## Additional resources
 
-To learn more about AR, MA, and ARMA, have a look at lessons 1 and 2 [here](https://onlinecourses.science.psu.edu/stat510/node/41/).
+To learn more about AR, MA, and ARMA, have a look at lessons 1 and 2 [here](https://online.stat.psu.edu/stat510/).
 
 ## Summary
 
